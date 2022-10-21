@@ -8,7 +8,8 @@ import ModalContainer from "../ModalContainer/ModalContainer";
 import FormSendTweet from "../FormSendTweet/FormSendTweet";
 import { TWEETS_STORAGE } from "../../utils/contants";
 
-const SendTweet = () => {
+const SendTweet = (props) => {
+  const { setToastProps } = props;
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const openModal = () => {
@@ -24,12 +25,18 @@ const SendTweet = () => {
     let allTweetsArray = [];
 
     if (!formValue.name || !formValue.tweet) {
-      console.log("Todos los campos son obligatorios!");
+      setToastProps({
+        open: true,
+        text: "Todos los campos son obligatorios!",
+      });
     } else {
       formValue.time = moment();
       allTweetsArray.push(formValue);
       localStorage.setItem(TWEETS_STORAGE, JSON.stringify(allTweetsArray));
-      console.log("Tweet enviado con exito");
+      setToastProps({
+        open: true,
+        text: "Tweet enviado con exito!",
+      });
       closeModal();
     }
     allTweetsArray = [];
