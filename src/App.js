@@ -1,4 +1,4 @@
-import { Container, Snackbar } from "@mui/material";
+import { Container } from "@mui/material";
 import Header from "./components/Header";
 
 function App() {
