@@ -1,5 +1,7 @@
-import { Container } from "@mui/material";
+import { Container, Snackbar } from "@mui/material";
+
 import Header from "./components/Header";
+import SendTweet from "./components/SendTweet";
 
 function App() {
   const nameApplication = "Tweet Simulator";
@@ -7,6 +9,7 @@ function App() {
   return (
     <Container className="tweets-simulator" maxWidth={false}>
       <Header title={nameApplication} />
+      <SendTweet />
     </Container>
   );
 }
