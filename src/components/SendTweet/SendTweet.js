@@ -5,6 +5,7 @@ import moment from "moment";
 
 import "./SendTweet.scss";
 import ModalContainer from "../ModalContainer/ModalContainer";
+import FormSendTweet from "../FormSendTweet/FormSendTweet";
 
 const SendTweet = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -28,7 +29,7 @@ const SendTweet = () => {
         <Add />
       </Fab>
       <ModalContainer isOpenModal={isOpenModal} closeModal={closeModal}>
-        <p>Contenido del modal</p>
+        <FormSendTweet />
       </ModalContainer>
     </div>
   );
