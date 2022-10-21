@@ -28,6 +28,7 @@ const SendTweet = (props) => {
       setToastProps({
         open: true,
         text: "Todos los campos son obligatorios!",
+        result: false,
       });
     } else {
       formValue.time = moment();
@@ -36,6 +37,7 @@ const SendTweet = (props) => {
       setToastProps({
         open: true,
         text: "Tweet enviado con exito!",
+        result: true,
       });
       closeModal();
     }
