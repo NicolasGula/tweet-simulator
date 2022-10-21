@@ -1,8 +1,13 @@
+import { Container, Snackbar } from "@mui/material";
+import Header from "./components/Header";
+
 function App() {
+  const nameApplication = "Tweet Simulator";
+
   return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
+    <Container className="tweets-simulator" maxWidth={false}>
+      <Header title={nameApplication} />
+    </Container>
   );
 }
 
