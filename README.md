@@ -30,7 +30,7 @@
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
-### Echo con
+### Hecho con
 
 [![React][react.js]][react-url]
 ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white)
