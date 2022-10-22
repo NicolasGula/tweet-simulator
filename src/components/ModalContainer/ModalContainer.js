@@ -8,7 +8,7 @@ const ModalContainer = (props) => {
     <Modal
       className="modal-container"
       open={isOpenModal}
-      onCloser="closeModal"
+      onClose={closeModal}
       closeAfterTransition
     >
       <div>{children}</div>
