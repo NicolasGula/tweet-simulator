@@ -8,6 +8,7 @@ const Tweet = (props) => {
   const {
     tweet: { name, tweet, time },
     index,
+    deleteTweet,
   } = props;
   console.log(props.tweet);
 
@@ -16,7 +17,7 @@ const Tweet = (props) => {
       <CardContent>
         <div className="tweet__header">
           <h5>{name}</h5>
-          <DeleteTwoTone onClick={() => console.log("hi")} />
+          <DeleteTwoTone onClick={() => deleteTweet(index)} />
         </div>
         <p>{tweet}</p>
         <div className="tweet__date-add-tweet">
