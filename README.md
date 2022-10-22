@@ -15,7 +15,7 @@
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">Ver demo</a>
+    <a href="https://stellular-tarsier-e8bf91.netlify.app/">Ver demo</a>
     ·
     <a href="https://github.com/NicolasGula/tweet-simulator/issues">Reportar errores</a>
     
