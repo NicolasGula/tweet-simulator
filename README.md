@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/NicolasGula/tweet-simulator/">
+  <a href="https://github.com/NicolasGula/tweet-simulator/blob/main/src/assets/img/twitter-logo.png">
     <img src="../tweet-simulator/src/assets/img/twitter-logo.png" alt="Logo" width="80" height="80">
   </a>
 
