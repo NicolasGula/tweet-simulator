@@ -12,8 +12,6 @@
   <p align="center">
     Mini simulador de Twitter realizado con React
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://stellular-tarsier-e8bf91.netlify.app/">Ver demo</a>
     ·
