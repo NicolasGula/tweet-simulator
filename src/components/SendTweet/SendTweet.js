@@ -9,7 +9,7 @@ import FormSendTweet from "../FormSendTweet/FormSendTweet";
 import { TWEETS_STORAGE } from "../../utils/contants";
 
 const SendTweet = (props) => {
-  const { setToastProps } = props;
+  const { setToastProps, allTweets } = props;
   const [isOpenModal, setIsOpenModal] = useState(false);
 
   const openModal = () => {
@@ -23,6 +23,10 @@ const SendTweet = (props) => {
   const sendTweet = (e, formValue) => {
     e.preventDefault();
     let allTweetsArray = [];
+
+    if (allTweets) {
+      allTweetsArray = allTweets;
+    }
 
     if (!formValue.name || !formValue.tweet) {
       setToastProps({

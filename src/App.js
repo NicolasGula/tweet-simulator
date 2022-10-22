@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Snackbar } from "@mui/material";
 import MuiAlert from "@mui/material/Alert";
 
 import Header from "./components/Header";
 import SendTweet from "./components/SendTweet";
+import ListTweets from "./components/ListTweets/ListTweets";
+
+import { TWEETS_STORAGE } from "./utils/contants";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -18,9 +21,15 @@ function App() {
     result: null,
   });
 
-  console.log(toastProps.result);
-  console.log(toastProps.open);
-  console.log(toastProps.text);
+  const [allTweets, setAllTweets] = useState([]);
+
+  useEffect(() => {
+    const AllTweetsStorage = localStorage.getItem(TWEETS_STORAGE);
+    const allTweetsArray = JSON.parse(AllTweetsStorage);
+    if (allTweetsArray) {
+      setAllTweets(allTweetsArray);
+    }
+  }, []);
 
   const handleClose = () => {
     setToastProps({
@@ -32,7 +41,8 @@ function App() {
   return (
     <Container className="tweets-simulator" maxWidth={false}>
       <Header title={nameApplication} />
-      <SendTweet setToastProps={setToastProps} />
+      <SendTweet setToastProps={setToastProps} allTweets={allTweets} />
+      <ListTweets allTweets={allTweets} />
       <Snackbar
         anchorOrigin={{
           vertical: "top",
